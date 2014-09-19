@@ -1,0 +1,11 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX uni: <http://purl.uniprot.org/core/> 
+PREFIX uni2: <http://purl.uniprot.org/>
+PREFIX schema: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?a ?b ?ab WHERE 
+{ 
+	?b uni:modified "2008-07-22" . 
+	?b rdf:type uni:Protein . 
+	?a uni:replaces ?ab .
+	?ab uni:replacedBy ?b . 
+}

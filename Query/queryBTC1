@@ -1,0 +1,12 @@
+PREFIX geo: <http://www.geonames.org/>
+PREFIX pos: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX dbpedia: <http://dbpedia.org/property/>
+PREFIX dbpediares: <http://dbpedia.org/resource/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+select ?lat ?long where  {
+	?a [] "Bro-C'hall" .
+	?a <http://www.geonames.org/ontology#inCountry> <http://www.geonames.org/countries/#FR> .
+	?a pos:lat ?lat .
+	?a pos:long ?long .
+}
+

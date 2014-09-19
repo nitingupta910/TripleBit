@@ -1,0 +1,9 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX uni: <http://purl.uniprot.org/core/>
+select ?protein ?annotation where 
+{
+	?protein uni:annotation ?annotation .
+	?protein rdf:type uni:Protein .
+    ?annotation rdf:type <http://purl.uniprot.org/core/Transmembrane_Annotation> .
+    ?annotation uni:range ?range .
+}

@@ -1,0 +1,12 @@
+PREFIX uni: <http://purl.uniprot.org/core/>
+PREFIX uniprot: <http://purl.uniprot.org/>
+PREFIX schema: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX file: <file:///uniprot.rdf# >
+select ?a ?vo where 
+{
+	?a uni:encodedBy ?vo. 
+	?a schema:seeAlso <http://purl.uniprot.org/refseq/NP_346136.1>. 
+	?a schema:seeAlso <http://purl.uniprot.org/tigr/SP_1698>. 
+	?a schema:seeAlso <http://purl.uniprot.org/pfam/PF00842>. 
+	?a schema:seeAlso <http://purl.uniprot.org/prints/PR00992>. 
+}

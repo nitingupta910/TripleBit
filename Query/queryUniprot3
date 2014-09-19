@@ -1,0 +1,15 @@
+PREFIX uni: <http://purl.uniprot.org/core/>
+PREFIX uniprot: <http://purl.uniprot.org/>
+PREFIX schema: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX file: <file:///jpkc3/liupu/rdf3x-0.3.4/../uniprot.rdf#>
+select ?a ?vo where 
+{
+	 ?a schema:seeAlso ?vo . 
+	 ?a uni:classifiedWith <http://purl.uniprot.org/keywords/67> . 
+	 ?a schema:seeAlso <http://purl.uniprot.org/embl-cds/AAN81952.1> . 
+	 ?b schema:seeAlso <http://purl.uniprot.org/geneid/1025922> . 
+	 ?b schema:seeAlso <http://purl.uniprot.org/smr/P0A7A1> . 
+	 ?b schema:seeAlso <http://purl.uniprot.org/embl-cds/AAP18215.1> . 
+	 ?a uni:replaces ?ab . 
+	 ?ab uni:replacedBy ?b .
+}

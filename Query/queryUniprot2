@@ -1,0 +1,10 @@
+PREFIX uni: <http://purl.uniprot.org/core/>
+PREFIX uniprot: <http://purl.uniprot.org/>
+PREFIX schema: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX file: <file:///uniprot.rdf# >
+select ?protein ?name where 
+{
+	?protein a uni:Protein .
+	?protein uni:encodedBy [uni:name "CRB"] .
+	?protein  uni:name ?name .
+}

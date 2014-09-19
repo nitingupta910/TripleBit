@@ -1,0 +1,12 @@
+PREFIX geo: <http://www.geonames.org/>
+PREFIX pos: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX dbpedia: <http://dbpedia.org/property/>
+PREFIX dbpediares: <http://dbpedia.org/resource/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+select distinct ?a ?y where {
+	 ?a a <http://dbpedia.org/class/yago/Politician110451263>.
+	 ?a dbpedia:years ?y.
+	 ?a <http://xmlns.com/foaf/0.1/name> ?n.
+     ?b [] ?n.
+     ?b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/OfficeHolder> .
+}
